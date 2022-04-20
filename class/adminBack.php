@@ -203,4 +203,13 @@ class adminBack
             return mysqli_query($this->conn, $query);
         }
     }
+
+    // Users Show
+    function displayUsers()
+    {
+        $query =  "SELECT * FROM users";
+        if (mysqli_query($this->conn, $query)) {
+            return mysqli_query($this->conn, $query);
+        }
+    }
 }

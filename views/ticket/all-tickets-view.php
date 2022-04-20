@@ -61,7 +61,6 @@ $msg = $admin_obj->displayTicket();
                                     } else if ($mons && $mons < 12) {
                                         echo $mons + 1 . " mons";
                                     }
-                                    // echo $days;
                                     ?>
                                     ago
                                 </p>
