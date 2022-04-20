@@ -1,0 +1,373 @@
+/* table css start */
+.table
+  margin-bottom: 0
+.table 
+  th 
+    font-size: fsize("12px")
+    text-align: center
+    padding: 15px 25px
+    white-space: nowrap
+  td
+    font-size: fsize("14px")
+    color: $para-color
+    text-align: center
+    padding: 20px 25px
+    vertical-align: middle
+    white-space: nowrap
+    @media (max-width: 575px)
+      white-space: initial
+    span, p, li 
+      font-size: fsize("14px")
+table 
+  th 
+    &:last-child
+      text-align: right
+    &:first-child
+      text-align: left
+  td 
+    font-weight: 500
+    &:last-child
+      text-align: right
+    &:first-child
+      text-align: left
+      font-weight: 600
+  .user 
+    display: flex
+    align-items: center
+    .thumb 
+      width: 40px
+      height: 40px
+      img 
+        width: 40px
+        height: 40px
+        +border-radius(50%)
+        object-fit: cover
+        -o-object-fit: cover
+        object-position: center
+        -o-object-position: center
+        border: 2px solid #ffffff
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2)
+    .name 
+      width: calc(100% - 40px)
+      padding-left: 10px
+.table-striped 
+  tbody 
+    tr
+      &:nth-of-type(odd)
+        background-color: rgba(115, 115, 115, 0.05)
+// data table css 
+div.dataTables_wrapper 
+  div.dataTables_filter
+    display: inline-block
+    float: right
+    @media (max-width: 767px)
+      float: none
+      width: 100%
+      margin-top: 20px
+    input
+      &:focus 
+        box-shadow: none 
+        border-color: $color--primary
+    label 
+      color: $para-color
+  .dt-buttons
+    button
+      border-radius: 3px !important
+      margin: 0 10px
+      background-color: transparent
+      border: 1px solid #d8d8d8
+      +border-radius(5px !important)
+      &:hover , &:focus, &:active
+        background-color: $color--primary!important
+        border-color: $color--primary!important
+        box-shadow: 0px 0px 7px 2px rgba(115, 103, 240, 0.46)!important
+        span 
+          color: #ffffff
+  .dataTables_info
+    float: left
+    color: $para-color
+    font-size: fsize("14px")
+    @media (max-width: 767px)
+      float: none
+  .dataTables_paginate 
+    float: right
+    @media (max-width: 767px)
+      float: none
+      margin-top: 15px!important
+  .dataTables_length  
+    label 
+      color: $para-color
+      select 
+        margin-left: 10px 
+        margin-right: 10px
+table.dataTable 
+  margin-top: 20px !important
+  margin-bottom: 20px !important
+  tbody 
+    tr 
+      &:first-child
+        td 
+          border-top: 1px solid #e5e5e5
+      &:last-child
+        td 
+          border-bottom: 1px solid #e5e5e5
+      td 
+        border: none
+        white-space: nowrap
+  thead 
+    tr 
+      background-color: $color--primary
+      th 
+        border: none
+        color: #ffffff
+        white-space: nowrap
+.dataTables_paginate
+  .pagination 
+    flex-wrap: wrap
+    margin: -5px -7px
+    .page-item
+      margin: 5px 7px
+      &.active 
+        .page-link
+          background-color: $color--primary
+          border-color: $color--primary
+          box-shadow: 0px 0px 7px 2px rgba(115, 103, 240, 0.46)
+      .page-link
+        font-size: fsize("14px")
+        color: $para-color
+        +border-radius(5px !important)
+        width: auto 
+        height: auto
+        padding: 8px 15px
+        &:focus 
+          box-shadow: 0px 0px 7px 2px rgba(115, 103, 240, 0.46)
+
+table.table--light
+  thead 
+    th
+      border: none
+      color: #ffffff
+      background-color: $base-color
+.customer-details
+  +d-flex
+  align-items: center
+  .thumb 
+    width: 45px
+    height: 45px
+    img 
+      width: 45px
+      height: 45px
+      object-fit: cover
+      -o-object-fit: cover
+      object-position: center
+      -o-object-position: center
+      +border-radius(50%)
+  .content 
+    padding-left: 15px
+.user-table-list 
+  display: -ms-flexbox
+  display: flex
+  justify-content: center
+  .user + .user  
+    margin-left: -10px
+    z-index: 1
+  .user 
+    width: 32px
+    height: 32px
+    +transition(all 0.3s)
+    position: relative
+    z-index: 2
+    &:hover 
+      z-index: 2
+      +transform(scale(1.05, 1.05))
+    img 
+      width: 32px
+      height: 32px
+      +border-radius(50%)
+      object-fit: cover
+      -o-object-fit: cover
+      object-position: center 
+      -o-object-position: center
+      border: 2px solid #ffffff
+      box-shadow: 0 5px 10px 0 rgba(#000000, 0.15)
+
+// table responsive 
+[data-label]
+  position: relative
+  &::before 
+    position: absolute
+    content: attr(data-label)
+    font-weight: 700 
+    color: #000000 
+    top: 0 
+    left: 0
+    padding: 13px 15px
+    display: none
+    font-size: 12px
+.table-responsive--lg
+  @media (max-width: 1199px)
+    thead 
+      display: none
+    tbody 
+      tr
+        &:nth-child(odd)
+          background-color: #f5f5f5
+    tr 
+      th, td 
+        display: block
+        padding-left: 45%!important
+        text-align: right!important
+    .user-table-list, .customer-details
+      justify-content: flex-end
+    [data-label]
+      &::before
+        display: block
+.table-responsive--md
+  @media (max-width: 991px)
+    thead 
+      display: none
+    tbody 
+      tr
+        &:nth-child(odd)
+          background-color: #f5f5f5
+    tr 
+      th, td 
+        display: block
+        padding-left: 45%!important
+        text-align: right!important
+    .user-table-list, .customer-details
+      justify-content: flex-end
+    [data-label]
+      &::before
+        display: block
+.table-responsive--sm
+  @media (max-width: 767px)
+    thead 
+      display: none
+    tbody 
+      tr
+        &:nth-child(odd)
+          background-color: #f5f5f5
+    tr 
+      th, td 
+        display: block
+        padding-left: 45%!important
+        text-align: right!important
+    .user-table-list, .customer-details
+      justify-content: flex-end
+    [data-label]
+      &::before
+        display: block
+.table-responsive--xs
+  @media (max-width: 575px)
+    thead 
+      display: none
+    tbody 
+      tr
+        &:nth-child(odd)
+          background-color: #f5f5f5
+    tr 
+      th, td 
+        display: block
+        padding-left: 45%!important
+        text-align: right!important
+    .user-table-list, .customer-details
+      justify-content: flex-end
+    [data-label]
+      &::before
+        display: block
+*[class*="table-responsive--"]
+  &.data-label--none 
+    @media (max-width: 1199px)
+      tr
+        th, td
+          padding-left: .75rem
+*[class*="table-responsive--"]
+  .table-dark
+    tbody 
+      [data-label] 
+        &::before 
+          color: $para-color
+.table-responsive--lg
+  .table-dark
+    @media (max-width: 1199px) 
+      tbody 
+        tr
+          &:nth-child(odd)
+            background-color: #343a40
+          &:nth-child(even)
+            background-color: #222930
+.table-responsive--md
+  .table-dark
+    @media (max-width: 991px) 
+      tbody 
+        tr
+          &:nth-child(odd)
+            background-color: #343a40
+          &:nth-child(even)
+            background-color: #222930
+.table-responsive--sm 
+  .table-dark
+    @media (max-width: 767px) 
+      tbody 
+        tr
+          &:nth-child(odd)
+            background-color: #343a40
+          &:nth-child(even)
+            background-color: #222930
+.table-responsive--xs
+  .table-dark
+    @media (max-width: 575px) 
+      tbody 
+        tr
+          &:nth-child(odd)
+            background-color: #343a40
+          &:nth-child(even)
+            background-color: #222930
+.pagination 
+  .page-item
+    &.active 
+      .page-link 
+        background-color: $color--primary
+        border-color: $color--primary
+        color: #ffffff
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.25)
+    &.previous, &.next
+      .page-link 
+        font-size: 0
+        position: relative
+        width: 35px
+        height: 35px
+    &.previous
+      .page-link 
+        &::before 
+          position: absolute
+          top: 7px
+          right: 11px
+          font-family: "Font Awesome 5 Free"
+          font-weight: 700
+          content: "\f104"
+          font-size: 16px
+    &.next
+      .page-link 
+        &::before 
+          position: absolute
+          top: 7px
+          right: 11px
+          font-family: "Font Awesome 5 Free"
+          font-weight: 700
+          content: "\f105"
+          font-size: 16px
+    &.next
+    .page-link, span 
+      font-size: .875rem
+      display: flex
+      width: 36px
+      height: 36px
+      margin: 0 3px
+      padding: 0
+      border-radius: 50% !important
+      align-items: center
+      justify-content: center
+      color: $para-color
+/* table css end */

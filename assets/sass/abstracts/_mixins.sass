@@ -1,0 +1,91 @@
+=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+
+=border-radius($property)
+  border-radius: $property
+  -webkit-border-radius: $property
+  -moz-border-radius: $property
+  -ms-border-radius: $property
+  -o-border-radius: $property
+
+=transition($property)
+  -webkit-transition: $property
+  -o-transition: $property
+  transition: $property
+
+=flexWidth($property)
+  flex: 0 0 $property
+  -ms-flex: 0 0 $property
+  max-width: $property
+
+=d-flex 
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+
+=animation($property)
+  animation: $property
+  -webkit-animation: $property
+  -moz-animation: $property
+
+// keyframes mixin
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+=placeholder($value)
+  &::-webkit-input-placeholder
+    color: $value
+  &::-moz-placeholder
+    color: $value
+  &:-ms-input-placeholder
+    color: $value
+  &:-moz-placeholder
+    color: $value
+
+=color($bg-color, $text-color)
+  background-color: $bg-color
+  color: $text-color
+
+=shadow1
+  box-shadow: 0px -5px 26px -5px #cdd4e7
+
+=shadow-outside
+  box-shadow: -4px -4px 3px rgba(255, 255, 255, 0.1), 4px 4px 5px rgba(0, 0, 0, 0.35) !important
+=shadow-inside
+  box-shadow: 7px 7px 10px rgba(0,0,0,0.25) inset, -4px -4px 4px rgba(255, 255, 255, 0.05) inset !important
+  border: 1px solid #303142!important
+=shadow-inside-two
+  box-shadow: inset -4px -3px 8px 0px rgba(52, 56, 72, 0.8),inset 3px 3px 16px 0px rgba(12, 11, 12, 0.6), inset -17px -12px 33px 0px rgba(52, 56, 72, 0.8),inset 12px 12px 67px 0px rgba(12, 11, 12, 0.6)!important
+  border: 1px solid #303142!important
+
+=gradient-one
+  background-image: -moz-linear-gradient( 14deg, #4656bb 18%, #9f05e7 82%)!important
+  background-image: -webkit-linear-gradient( 14deg, #4656bb 18%, #9f05e7 82%)!important
+  background-image: -ms-linear-gradient( 14deg, #4656bb 18%, #9f05e7 82%)!important
+
+=gradient-two
+  background-image: -moz-linear-gradient( 19deg, rgb(236,57,139) 0%, rgb(153,72,163) 41%, rgb(70,86,187) 99%)!important
+  background-image: -webkit-linear-gradient( 19deg, rgb(236,57,139) 0%, rgb(153,72,163) 41%, rgb(70,86,187) 99%)!important
+  background-image: -ms-linear-gradient( 19deg, rgb(236,57,139) 0%, rgb(153,72,163) 41%, rgb(70,86,187) 99%)!important
+
+=gradient-three
+  background-image: -moz-linear-gradient( -177deg, #f24341 0%, #cd2c5b 53%, #a71574 100%)!important
+  background-image: -webkit-linear-gradient( -177deg, #f24341 0%, #cd2c5b 53%, #a71574 100%)!important
+  background-image: -ms-linear-gradient( -177deg, #f24341 0%, #cd2c5b 53%, #a71574 100%)!important
+
+=text-gradient 
+  background: #4380e4
+  background: -webkit-linear-gradient(to right, #f24341, #a71574)
+  background: linear-gradient(to right, #f24341, #a71574)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent

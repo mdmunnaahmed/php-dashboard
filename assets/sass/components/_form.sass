@@ -1,0 +1,181 @@
+/* form css start */
+label 
+  font-size: fsize("12px")
+input:not([type="radio"]), textarea
+  padding: 10px 20px
+  +border-radius(5px)
+  background-color: transparent
+  font-size: fsize("14px")!important
+  +placeholder(#c9c9c9!important)
+select 
+  padding: 8px 10px
+  cursor: pointer
+  color: $para-color
+  background-color: transparent
+  border-color: #ced4da
+  +border-radius(5px)
+textarea 
+  min-height: 100px
+  width: 100%
+  border-color: #ced4da
+  &.resize--none 
+    resize: none
+input[type="radio"],
+input[type="range"],
+input[type="checkbox"]
+  height: auto!important
+  padding: 0
+input
+  &.form-control
+    height: 40px
+  &.form-control-xl
+    height: calc(2rem + 1rem + 2px)
+    font-size: fsize("18px")!important
+  &.form-control-lg
+    height: calc(1.8rem + 1rem + 2px)
+    font-size: fsize("16px")!important
+  &.form-control-sm
+    height: calc(1rem + 1rem + 2px)
+    font-size: fsize("13px")!important
+.label--text 
+  font-size: fsize("14px")
+  margin-bottom: 0.5rem
+.form-control, input, textarea, select 
+  &:focus, &:active, &:visited, &:focus-within
+    border-color: $color--primary
+    box-shadow: 0 3px 9px rgba(50,50,9,0.05), 3px 4px 8px rgba($color--primary,.1)
+
+// select 2 form 
+.select2-container 
+  width: 100%!important
+  .select2-selection--single
+    height: 34px
+.select2-container--default .select2-selection--single .select2-selection__rendered
+  line-height: 34px
+.select2-container--default .select2-selection--single .select2-selection__arrow
+  height: 34px
+.select2-container--default 
+  .select2-selection--multiple 
+    .select2-selection__choice 
+      background-color: $color--primary
+      border-color: $color--primary
+    .select2-selection__choice__display,
+    .select2-selection__choice__remove span
+      color: #ffffff
+      font-size: 12px
+    .select2-selection__choice__remove 
+      &:hover 
+        background-color: darken($color--primary, 5%)
+// custom form checkbox 
+.custom-control-label
+  &::before, &::after 
+    top: 0
+.form-check-primary
+  .custom-control-input:checked~.custom-control-label
+    &::before
+      border-color: $color--primary
+      background-color: $color--primary
+.form-check-secondary
+  .custom-control-input:checked~.custom-control-label
+    &::before
+      border-color: $color--secondary
+      background-color: $color--secondary
+.form-check-success
+  .custom-control-input:checked~.custom-control-label
+    &::before
+      border-color: $color--success
+      background-color: $color--success
+.form-check-info
+  .custom-control-input:checked~.custom-control-label
+    &::before
+      border-color: $color--info
+      background-color: $color--info
+.form-check-warning
+  .custom-control-input:checked~.custom-control-label
+    &::before
+      border-color: $color--warning
+      background-color: $color--warning
+.form-check-danger
+  .custom-control-input:checked~.custom-control-label
+    &::before
+      border-color: $color--danger
+      background-color: $color--danger
+
+// custom bootstrap toggle checkbox 
+.toggle-group 
+  .toggle-handle 
+    background-color: $color--dark
+  .toggle-off
+    background-color: #293654
+    color: #ffffff
+.toggle 
+  input[data-size="small"] ~ .toggle-group 
+    label 
+      font-size: fsize("12px")
+
+.timepicki 
+  &.time_pick
+    input 
+      width: 100%
+      border: 1px solid #ced4da
+  .timepicker_wrap  
+    margin-bottom: 30px
+    background-color: #ffffff
+    box-shadow: 0px 5px 20px 0 rgba(123, 123, 123, 0.25)
+    .prev, .next 
+      width: 58px
+      padding: 17px
+    .timepicki-input 
+      padding: 15px 10px
+      font-size: 16px!important
+      font-weight: 700
+// .clockpicker-popover
+//   .popover-title 
+//     font-size: 36px
+//     line-height: 65px
+//     .clockpicker-span-hours 
+//       color: $color--primary!important
+//   .clockpicker-canvas 
+//     line
+//       stroke: $color--primary
+//     .clockpicker-canvas-fg
+//       fill: rgba($color--primary, 0.5)
+//     .clockpicker-canvas-bg 
+//       fill: rgba($color--primary, 0.5)
+//     .clockpicker-canvas-bearing
+//       fill: $color--primary
+//     .clockpicker-tick
+//       &.active, &:hover
+//         background-color: rgba($color--primary, 0.5)
+.pincode-input-container 
+  input 
+    &:focus, &:active 
+      box-shadow: none
+      border-color: $color--primary
+  input ~ input 
+    &:focus, &:active 
+      border-left-width: 1px
+.custom-switch 
+  .custom-control-label
+    &::after
+      top: calc(.25rem + -2px)
+.timepicker_wrap  
+  .action-next, 
+  .action-prev 
+    position: relative
+    &::before 
+      position: absolute
+      content: "\f107"
+      font-family: "Font Awesome 5 Free"
+      color: #000000
+      left: 23px
+  .action-next
+    &::before 
+      +transform(rotate(180deg))
+      top: 0
+  .action-prev
+    &::before 
+      bottom: 0
+.datepicker 
+  z-index: 999999
+/* form css end */

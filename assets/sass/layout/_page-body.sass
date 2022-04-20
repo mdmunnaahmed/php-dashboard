@@ -1,0 +1,93 @@
+/* body-wrapper css start */
+.body-wrapper 
+  margin-left: 250px
+  padding: 30px
+  transition: all 0.5s cubic-bezier(0.40, -0.25, 0.25, 1.1)
+  overflow-x: hidden
+  @media (max-width: 575px)
+    padding: 30px 10px
+  &.active 
+    margin-left: 80px
+  @media (max-width: 991px)
+    margin-left: 0
+.page-title 
+  font-size: fsize("18px")
+  display: inline-block
+.page-breadcrumb
+  padding: 0
+  margin: 0
+  background-color: transparent
+  li 
+    font-size: fsize("14px")
+    a 
+      color: $color--primary
+
+.activity-list
+  &__item 
+    padding-left: 30px
+    position: relative
+    padding-bottom: 30px
+    &::before 
+      position: absolute
+      content: ''
+      left: 5px
+      top: 4px
+      width: 3px
+      height: 100%
+      border-left: 1px solid #e7d2d2
+    .dot 
+      width: 12px
+      height: 12px
+      display: inline-block
+      position: absolute
+      top: 3px
+      left: 0
+    .title
+      font-size: fsize("14px")
+      margin-bottom: 10px
+    .date
+      font-weight: 500 
+      font-size: fsize("12px")
+  .slimScrollBar
+    background-color: #000000 !important
+    width: 1px !important
+    opacity: .25 !important
+
+#world-map-markers
+  height: 400px
+
+.pricing-table
+  .price 
+    font-size: 52px
+.package-features-list 
+  display: inline-block
+  text-align: left
+  li + li 
+    margin-top: 20px
+  li 
+    +d-flex 
+    align-items: center
+    i 
+      font-size: 11px
+      width: 20px
+      height: 20px
+      margin-right: 10px
+      +border-radius(50%)
+      +d-flex 
+      align-items: center
+      justify-content: center
+
+.single-answer
+  border: 1px solid #e5e5e5
+  +border-radius(5px)
+  &.from__admin 
+    .single-answer__header 
+      background-color: rgba($color--success, 0.15)
+  &__header 
+    padding: 10px 30px
+    background-color: #f1f1f1
+    +d-flex
+    justify-content: space-between
+  &__body
+    padding: 30px
+/* body-wrapper css end */

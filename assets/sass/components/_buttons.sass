@@ -1,0 +1,284 @@
+/* button css start */
+.button--group 
+  margin: -5px -15px
+  .btn 
+    margin: 5px 10px
+.btn 
+  i 
+    margin-right: 5px
+*[class*="btn-"]
+  transition: all 0.3s
+  font-size: fsize("14px")
+.btn--capsule 
+  +border-radius(999px)
+.btn--primary
+  background-color: $color--primary
+  &:hover
+    background-color: darken($color--primary, 5%)
+.btn--secondary
+  background-color: $color--secondary
+  &:hover
+    background-color: darken($color--secondary, 5%)
+.btn--success
+  background-color: $color--success
+  &:hover
+    background-color: darken($color--success, 5%)
+.btn--danger
+  background-color: $color--danger
+  &:hover
+    background-color: darken($color--danger, 5%)
+.btn--warning
+  background-color: $color--warning
+  &:hover
+    background-color: darken($color--warning, 5%)
+.btn--info
+  background-color: $color--info
+  &:hover
+    background-color: darken($color--info, 5%)
+.btn--dark
+  background-color: $color--dark
+  &:hover
+    background-color: darken($color--dark, 5%)
+
+.btn--primary, .btn--secondary, .btn--success, .btn--danger, .btn--warning, .btn--info, .btn--dark
+  color: #ffffff
+  &:hover 
+    color: #ffffff
+// outline btn 
+.btn-outline--primary, .btn-outline--secondary, .btn-outline--success, .btn-outline--danger, .btn-outline--warning, .btn-outline--info, .btn-outline--dark 
+  &:hover 
+    color: #ffffff
+.btn-outline--primary
+  color: $color--primary
+  border-color: $color--primary
+  &:hover
+    background-color: $color--primary
+.btn-outline--secondary
+  color: $color--secondary
+  border-color: $color--secondary
+  &:hover
+    background-color: $color--secondary
+.btn-outline--success
+  color: $color--success
+  border-color: $color--success
+  &:hover
+    background-color: $color--success
+.btn-outline--danger
+  color: $color--danger
+  border-color: $color--danger
+  &:hover
+    background-color: $color--danger
+.btn-outline--warning
+  color: $color--warning
+  border-color: $color--warning
+  &:hover
+    background-color: $color--warning
+.btn-outline--info
+  color: $color--info
+  border-color: $color--info
+  &:hover
+    background-color: $color--info
+.btn-outline--dark
+  color: $color--dark
+  border-color: $color--dark
+  &:hover
+    background-color: $color--dark
+
+/* btn shadow css start */
+.btn--shadow-default
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2)!important
+.btn--primary
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--primary, 0.35)
+    &:hover 
+      +transform(translateY(-2px))
+      box-shadow: 0 8px 15px 0 rgba($color--primary, 0.45)
+
+.btn--secondary
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--secondary, 0.35)
+    &:hover 
+      +transform(translateY(-2px))
+      box-shadow: 0 8px 15px 0 rgba($color--secondary, 0.45)
+
+.btn--success
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--success, 0.35)
+    &:hover 
+      +transform(translateY(-2px))
+      box-shadow: 0 8px 15px 0 rgba($color--success, 0.45)
+
+.btn--danger
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--danger, 0.35)
+    &:hover 
+      +transform(translateY(-2px))
+      box-shadow: 0 8px 15px 0 rgba($color--danger, 0.45)
+
+.btn--warning
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--warning, 0.35)
+    &:hover 
+      +transform(translateY(-2px))
+      box-shadow: 0 8px 15px 0 rgba($color--warning, 0.45)
+
+.btn--info
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--info, 0.35)
+    &:hover 
+      +transform(translateY(-2px))
+      box-shadow: 0 8px 15px 0 rgba($color--info, 0.45)
+
+.btn--dark
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--dark, 0.35)
+    &:hover 
+      +transform(translateY(-2px))
+      box-shadow: 0 8px 15px 0 rgba($color--dark, 0.45)
+
+// btn outline shadow
+.btn-outline--primary
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--primary, 0.35)
+    &:hover 
+      box-shadow: 0 8px 15px 0 rgba($color--primary, 0.45)
+
+.btn-outline--secondary
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--secondary, 0.35)
+    &:hover 
+      box-shadow: 0 8px 15px 0 rgba($color--secondary, 0.45)
+
+.btn-outline--success
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--success, 0.35)
+    &:hover 
+      box-shadow: 0 8px 15px 0 rgba($color--success, 0.45)
+
+.btn-outline--danger
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--danger, 0.35)
+    &:hover 
+      box-shadow: 0 8px 15px 0 rgba($color--danger, 0.45)
+
+.btn-outline--warning
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--warning, 0.35)
+    &:hover 
+      box-shadow: 0 8px 15px 0 rgba($color--warning, 0.45)
+
+.btn-outline--info
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--info, 0.35)
+    &:hover 
+      box-shadow: 0 8px 15px 0 rgba($color--info, 0.45)
+
+.btn-outline--dark
+  &.btn--shadow
+    box-shadow: 0 5px 10px 0 rgba($color--dark, 0.35)
+    &:hover 
+      box-shadow: 0 8px 15px 0 rgba($color--dark, 0.45)
+/* btn shadow css end */
+
+/* btn gradient css start */
+.btn--gradi
+  border: none
+  text-shadow: 1px 2px 4px rgba(0,0,0,.3)
+.btn--primary, .btn-primary
+  &.btn--gradi
+    background: #640064
+    background-image: linear-gradient(30deg,$color--primary,rgba($color--primary,.5))!important
+    text-shadow: 1px 2px 4px rgba(0,0,0,.3)
+.btn--secondary, .btn-secondary
+  &.btn--gradi
+    background: linear-gradient(to right, #636f8e 0%, #acb8da 100%)
+.btn--success, .btn-success
+  &.btn--gradi
+    background: #0064fa
+    background-image: linear-gradient(30deg,rgba($color--success,1),rgba($color--success,.6))!important
+.btn--danger, .btn-danger
+  &.btn--gradi
+    background: #640064
+    background-image: linear-gradient(30deg,rgba($color--danger,1),rgba($color--danger,.15))!important
+.btn--warning, .btn-warning
+  &.btn--gradi
+    background: #fafafa
+    background-image: linear-gradient(30deg,rgba($color--warning,1),rgba($color--warning,.5))!important
+.btn--info, .btn-info
+  &.btn--gradi
+    background: linear-gradient(30deg, lighten($color--info, 10%) 0%, darken($color--info, 15%) 100%)!important
+.btn--dark, .btn-dark
+  &.btn--gradi
+    background: linear-gradient(30deg, lighten($color--dark, 50%) 0%, darken($color--dark, 15%) 100%)!important
+
+.icon-btn + .icon-btn
+  margin-left: 5px
+.icon-btn 
+  padding: 3px 8px
+  background-color: $color--primary
+  color: #ffffff
+  border-radius: 3px
+  font-size: 13px
+  &:hover
+    color: #ffffff
+a.icon-btn
+  padding: 5px 8px
+
+
+.badge--pending,
+.badge--warning,
+.badge--success,
+.badge--primary,
+.badge--danger 
+  border-radius: 999px
+  padding: 2px 15px
+  position: relative
+  padding-left: 25px
+  +border-radius(999px)
+
+
+.badge--warning::before,
+.badge--success::before,
+.badge--primary::before,
+.badge--danger::before 
+  position: absolute
+  content: ''
+  width: 8px
+  height: 8px
+  left: 9px
+  top: 4px
+  +border-radius(50%)
+  
+.badge--warning
+  background-color: rgba($color--warning, 0.2)
+  border: 1px solid $color--warning
+  color: $color--warning
+    
+.badge--warning::before 
+  background-color: $color--warning
+
+.badge--success 
+  background-color: rgba($color--success, 0.2)
+  border: 1px solid $color--success
+  color: $color--success
+
+.badge--success::before
+  background-color: $color--success
+
+.badge--danger 
+  background-color: rgba($color--danger, 0.2)
+  border: 1px solid $color--danger
+  color: $color--danger
+
+.badge--danger::before
+  background-color: $color--danger
+
+.badge--primary
+  background-color: rgba($color--primary, 0.2)
+  border: 1px solid $color--primary
+  color: $color--primary
+.badge--primary::before
+  background-color: $color--primary
+/* btn gradient css end */
+
+  

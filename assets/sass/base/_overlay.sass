@@ -1,0 +1,352 @@
+/* overlay css start */
+[class*="overlay"]
+  position: relative
+  z-index: 1
+  &::before 
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0.85
+    z-index: -10
+  &.overlay--primary
+    &::before 
+      background-color: $color--primary!important
+
+  &.overlay--secondary
+    &::before 
+      background-color: $color--secondary!important
+
+  &.overlay--success
+    &::before 
+      background-color: $color--success!important
+
+  &.overlay--danger
+    &::before 
+      background-color: $color--danger!important
+
+  &.overlay--warning
+    &::before 
+      background-color: $color--warning!important
+
+  &.overlay--info
+    &::before 
+      background-color: $color--info!important
+
+  &.overlay--dark
+    &::before 
+      background-color: $color--dark!important
+
+  &.overlay--white
+    &::before 
+      background-color: $color--white!important
+
+  &.overlay--black
+    &::before 
+      background-color: $color--black!important
+
+  &.overlay--gray
+    &::before 
+      background-color: $color--gray!important
+
+  &.overlay--blue-gray
+    &::before 
+      background-color: $color--blue-gray!important
+
+  &.overlay--red
+    &::before 
+      background-color: $color--red!important
+
+  &.overlay--pink
+    &::before 
+      background-color: $color--pink!important
+
+  &.overlay--purple
+    &::before 
+      background-color: $color--purple!important
+
+  &.overlay--deep-purple
+    &::before 
+      background-color: $color--deep-purple!important
+
+  &.overlay--indigo
+    &::before 
+      background-color: $color--indigo!important
+
+  &.overlay--blue
+    &::before 
+      background-color: $color--blue!important
+
+  &.overlay--light-blue
+    &::before 
+      background-color: $color--light-blue!important
+
+  &.overlay--cyan
+    &::before 
+      background-color: $color--cyan!important
+
+  &.overlay--teal
+    &::before 
+      background-color: $color--teal!important
+
+  &.overlay--green
+    &::before 
+      background-color: $color--green!important
+
+  &.overlay--light-green
+    &::before 
+      background-color: $color--light-green!important
+
+  &.overlay--lime
+    &::before 
+      background-color: $color--lime!important
+
+  &.overlay--yellow
+    &::before 
+      background-color: $color--yellow!important
+
+  &.overlay--amber
+    &::before 
+      background-color: $color--amber!important
+
+  &.overlay--orange
+    &::before 
+      background-color: $color--orange!important
+
+  &.overlay--brown
+    &::before 
+      background-color: $color--brown!important
+
+  // overlay gradient 
+  &.overlay--gradi-1
+    &::before 
+      @extend .bg--gradi-1
+
+  &.overlay--gradi-2
+    &::before 
+      @extend .bg--gradi-2
+
+  &.overlay--gradi-3
+    &::before 
+      @extend .bg--gradi-3
+
+  &.overlay--gradi-4
+    &::before 
+      @extend .bg--gradi-4
+
+  &.overlay--gradi-5
+    &::before 
+      @extend .bg--gradi-5
+
+  &.overlay--gradi-6
+    &::before 
+      @extend .bg--gradi-6
+  
+  &.overlay--gradi-7
+    &::before 
+      @extend .bg--gradi-7
+  
+  &.overlay--gradi-8
+    &::before 
+      @extend .bg--gradi-8
+
+  &.overlay--gradi-9
+    &::before 
+      @extend .bg--gradi-9
+
+  &.overlay--gradi-10
+    &::before 
+      @extend .bg--gradi-10
+
+  &.overlay--gradi-11
+    &::before 
+      @extend .bg--gradi-11
+
+  &.overlay--gradi-12
+    &::before 
+      @extend .bg--gradi-12
+
+  &.overlay--gradi-13
+    &::before 
+      @extend .bg--gradi-13
+
+  &.overlay--gradi-14
+    &::before 
+      @extend .bg--gradi-14
+  
+  &.overlay--gradi-15
+    &::before 
+      @extend .bg--gradi-15
+  
+  &.overlay--gradi-16
+    &::before 
+      @extend .bg--gradi-16
+
+  &.overlay--gradi-17
+    &::before 
+      @extend .bg--gradi-17
+
+  &.overlay--gradi-18
+    &::before 
+      @extend .bg--gradi-18
+
+  &.overlay--gradi-19
+    &::before 
+      @extend .bg--gradi-19
+
+  &.overlay--gradi-20
+    &::before 
+      @extend .bg--gradi-20
+
+  &.overlay--gradi-21
+    &::before 
+      @extend .bg--gradi-21
+
+  &.overlay--gradi-22
+    &::before 
+      @extend .bg--gradi-22
+
+  &.overlay--gradi-23
+    &::before 
+      @extend .bg--gradi-23
+
+  &.overlay--gradi-24
+    &::before 
+      @extend .bg--gradi-24
+
+  &.overlay--gradi-25
+    &::before 
+      @extend .bg--gradi-25
+
+  &.overlay--gradi-26
+    &::before 
+      @extend .bg--gradi-26
+
+  &.overlay--gradi-27
+    &::before 
+      @extend .bg--gradi-27
+
+  &.overlay--gradi-28
+    &::before 
+      @extend .bg--gradi-28
+
+  &.overlay--gradi-29
+    &::before 
+      @extend .bg--gradi-29
+
+  &.overlay--gradi-30
+    &::before 
+      @extend .bg--gradi-30
+
+  &.overlay--gradi-31
+    &::before 
+      @extend .bg--gradi-31
+
+  &.overlay--gradi-32
+    &::before 
+      @extend .bg--gradi-32
+
+  &.overlay--gradi-33
+    &::before 
+      @extend .bg--gradi-33
+
+  &.overlay--gradi-34
+    &::before 
+      @extend .bg--gradi-34
+
+  &.overlay--gradi-35
+    &::before 
+      @extend .bg--gradi-35
+
+  &.overlay--gradi-36
+    &::before 
+      @extend .bg--gradi-36
+
+  &.overlay--gradi-37
+    &::before 
+      @extend .bg--gradi-37
+
+  &.overlay--gradi-38
+    &::before 
+      @extend .bg--gradi-38
+
+  &.overlay--gradi-39
+    &::before 
+      @extend .bg--gradi-39
+  
+  &.overlay--gradi-40
+    &::before 
+      @extend .bg--gradi-40
+
+  &.overlay--gradi-41
+    &::before 
+      @extend .bg--gradi-41
+
+  &.overlay--gradi-42
+    &::before 
+      @extend .bg--gradi-42
+
+  &.overlay--gradi-43
+    &::before 
+      @extend .bg--gradi-43
+
+  &.overlay--gradi-44
+    &::before 
+      @extend .bg--gradi-44
+
+  &.overlay--gradi-45
+    &::before 
+      @extend .bg--gradi-45
+
+  &.overlay--gradi-46
+    &::before 
+      @extend .bg--gradi-46
+
+  &.overlay--gradi-47
+    &::before 
+      @extend .bg--gradi-47
+
+  &.overlay--gradi-48
+    &::before 
+      @extend .bg--gradi-48
+      
+  &.overlay--gradi-49
+    &::before 
+      @extend .bg--gradi-49
+
+  &.overlay--gradi-50
+    &::before 
+      @extend .bg--gradi-50
+.overlay--opacity-1
+  &::before 
+    opacity: 0.1!important
+.overlay--opacity-2
+  &::before 
+    opacity: 0.2!important
+.overlay--opacity-3 
+  &::before 
+    opacity: 0.3!important
+.overlay--opacity-4
+  &::before 
+    opacity: 0.4!important
+.overlay--opacity-5 
+  &::before 
+    opacity: 0.5!important
+.overlay--opacity-6
+  &::before 
+    opacity: 0.6!important
+.overlay--overlay--opacity-7
+  &::before 
+    opacity: 0.7!important
+.overlay--opacity-8
+  &::before 
+    opacity: 0.8!important
+.overlay--opacity-9
+  &::before 
+    opacity: 0.9!important
+.overlay--opacity-10
+  &::before 
+    opacity: 1!important
+/* overlay css end */

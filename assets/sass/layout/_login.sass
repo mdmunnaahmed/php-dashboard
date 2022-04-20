@@ -1,0 +1,141 @@
+/* login css start */
+.container, .container-sm 
+  @media (min-width: 576px)
+    max-width: 540px;
+
+.container, .container-md, .container-sm
+  @media (min-width: 768px)
+    max-width: 720px;
+
+.container, .container-lg, .container-md, .container-sm 
+  @media (min-width: 992px)
+    max-width: 960px
+
+.container, .container-lg, .container-md, .container-sm, .container-xl 
+  @media (min-width: 1200px)
+    max-width: 1140px;
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+  @media (min-width: 1400px)
+    max-width: 1320px
+
+.col-xxl-4
+  @media (min-width: 1400px)
+    flex: 0 0 calc(100% / 3)
+    max-width: calc(100% / 3)
+
+
+.login-main 
+  padding: 100px 0
+  background-size: cover
+  background-repeat: no-repeat
+  min-height: 100vh 
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  position: relative
+  z-index: 1
+  overflow: hidden
+  background-color: #3d2bfb
+  @media (max-width: 575px)
+    padding: 50px 0
+  &::before 
+    position: absolute
+    content: '' 
+    top: 0 
+    left: 0 
+    width: 100%
+    height: 100% 
+    background-color: #1E157D 
+    opacity: 0.57 
+    z-index: -1
+
+.login-area 
+  position: relative
+  &::after 
+    position: absolute
+    content: '' 
+    width: 247px
+    height: 247px
+    right: -80px
+    top: -100px
+    border: 40px solid rgba(52, 34, 229, 0.31)
+    box-sizing: border-box
+    filter: blur(2px)
+    +border-radius(50%)
+
+.login-wrapper
+  background-color: #1E157D
+  +border-radius(10px)
+  overflow: hidden
+  &__top 
+    padding: 60px 30px 40px 30px
+    text-align: center
+    background-color: #3D2BFB
+    +border-radius(10px)
+    position: relative
+    z-index: 1
+    @media (max-width: 575px) 
+      padding: 40px 15px
+    &::after 
+      position: absolute
+      content: '' 
+      bottom: -25px;
+      left: 5px;
+      z-index: -1;
+      border-width: 25px 200px 0px 200px;
+      border-style: solid;
+      border-color: #3d2bfb transparent transparent transparent;
+      @media (max-width: 1399px) 
+        border-width: 25px 218px 0px 218px
+      @media (max-width: 767px) 
+        border-width: 25px 228px 0px 228px
+      @media (max-width: 575px) 
+        display: none
+    .title 
+      font-size: 30px 
+      font-weight: 600 
+      @media (max-width: 575px) 
+        font-size: 24px
+      @media (max-width: 360px) 
+        font-size: 22px
+    p 
+      font-size: 17px 
+      @media (max-width: 575px) 
+        font-size: 14px
+  &__body 
+    padding: 60px 40px 40px 40px 
+    @media (max-width: 575px) 
+      padding: 30px 20px
+
+.login-form 
+  label
+    color: rgba(#fff, 0.6)
+    font-size: 16px 
+    font-weight: 500 
+    &.form-check-label 
+      font-size: 14px
+  .form-control 
+    height: 50px 
+    border: 1px solid rgba(#fff, 0.3)
+    +placeholder(rgba(#fff, 0.31) !important)
+    color: #fff 
+    font-size: 16px
+    padding: 20px 
+    &:focus 
+      background-color: transparent 
+      border-color: #3D2BFB
+  .forget-text 
+    color: #fff
+    text-decoration: underline
+  .cmn-btn  
+    margin-top: 40px
+
+.cmn-btn 
+  background-color: #3D2BFB
+  color: #fff 
+  height: 50px 
+  &:hover 
+    color: #fff 
+/* login css end */
