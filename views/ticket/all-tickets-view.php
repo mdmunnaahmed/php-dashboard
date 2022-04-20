@@ -45,7 +45,7 @@ $msg = $admin_obj->displayTicket();
                                     <?php
                                     $years = gmdate('y', (time() - strtotime($data['last_message']))) - 1;
                                     $mons = gmdate('m', (time() - strtotime($data['last_message']))) - 1;
-                                    $days = gmdate('d', (time() - strtotime($data['last_message'])));
+                                    $days = gmdate('d', (time() - strtotime($data['last_message']))) - 1;
                                     $hours = gmdate('H', (time() - strtotime($data['last_message'])));
                                     $mins = gmdate('i', (time() - strtotime($data['last_message'])));
                                     $secs = gmdate('s', (time() - strtotime($data['last_message'])));
@@ -61,7 +61,7 @@ $msg = $admin_obj->displayTicket();
                                     } else if ($mons && $mons < 12) {
                                         echo $mons + 1 . " mons";
                                     }
-                                    // echo $mons;
+                                    // echo $days;
                                     ?>
                                     ago
                                 </p>
