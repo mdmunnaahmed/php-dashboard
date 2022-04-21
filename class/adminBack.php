@@ -50,6 +50,30 @@ $sql = "CREATE TABLE IF NOT EXISTS tickets (
 )";
 $db->query($sql);
 
+$sql = "CREATE TABLE IF NOT EXISTS users (
+   id INT(11) NOT NULL auto_increment,
+   fname VARCHAR(255) NOT NULL,
+   lname VARCHAR(255) NOT NULL,
+   uname VARCHAR(255) NOT NULL,
+   email VARCHAR(255) NOT NULL,
+   balance INT(11) NOT NULL,
+
+   mobile INT(11) NOT NULL,
+   address VARCHAR(255) NOT NULL,
+   city VARCHAR(255) NOT NULL,
+   zip INT(11) NOT NULL,
+   country VARCHAR(255) NOT NULL,
+
+   status TINYINT,
+   email_verification TINYINT,
+   email_notification TINYINT,
+   2fa_status TINYINT,
+   2fa_verification TINYINT,
+   res_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   PRIMARY KEY(id)
+)";
+$db->query($sql);
+
 
 
 // Insert Demo data into the Admin Table if table is empty
@@ -75,6 +99,14 @@ $result2 = mysqli_query($db, $sql);
 $row = mysqli_num_rows($result2);
 if ($row == 0) {
     $sql = "INSERT INTO tickets (ticket_id , subject, username, email, status) VALUES('#9812V2ERU9', 'For Installation','user', 'user@gmail.com', '1')";
+    mysqli_query($db, $sql);
+}
+
+$sql = "SELECT * FROM users";
+$result2 = mysqli_query($db, $sql);
+$row = mysqli_num_rows($result2);
+if ($row == 0) {
+    $sql = "INSERT INTO `users` (`id`, `fname`, `lname`, `uname`, `email`, `mobile`, `address`, `city`, `zip`, `country`, `status`, `email_verification`, `email_notification`, `2fa_status`, `2fa_verification`, `balance`) VALUES ('1', 'munna', 'ahmed', 'munna77', 'msdmunna77@gmail.com', '01400091582', 'Kushtia', 'Kushtia', '7020', 'Bangladesh', '1', '1', '1', '1', '0', '100')";
     mysqli_query($db, $sql);
 }
 
@@ -211,10 +243,10 @@ class adminBack
 
         $query =  "UPDATE setting SET site_title = '$site_title', currency ='$currency', currency_symbol ='$currency_symbol', base_color ='$base_color', secondary_color ='$secondary_color', secure_pass = $secure_pass, agree_policy =$agree_policy, user_registration =$user_registration, force_ssl =$force_ssl, email_verification =$email_verification, email_notification =$email_notification, sms_verification =$sms_verification, sms_notification =$sms_notification";
         if (mysqli_query($this->conn, $query)) {
-            $msg = "Setting Successfully Added";
+            $msg = "Setting Successfully Updated";
             return $msg;
         } else {
-            $msg = "Setting Couldn't Added";
+            $msg = "Setting Couldn't Updated";
             return $msg;
         }
     }

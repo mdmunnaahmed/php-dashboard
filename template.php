@@ -64,8 +64,8 @@ if (isset($_GET['adminLogout'])) {
                         include("views/general-setting-view.php");
                     } else if ("components" == $views) {
                         include("views/components-view.php");
-                    } else if ("user-detail" == $views) {
-                        include("views/user-detail-view.php");
+                    } else if ("user-details" == $views) {
+                        include("views/user/details-view.php");
                     }
                 }
 
@@ -84,7 +84,7 @@ if (isset($_GET['adminLogout'])) {
 
     <?php include "partials/template-bottom.php" ?>
 
- 
+
     <script>
         if (window.history.replaceState) {
             window.history.replaceState(null, null, window.location.href);

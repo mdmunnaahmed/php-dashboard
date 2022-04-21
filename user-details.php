@@ -1,3 +1,3 @@
 <?php
-$view = 'user-detail';
+$view = 'user-details';
 include("template.php");

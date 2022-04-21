@@ -729,7 +729,7 @@ if ($row == 0) {
 <link rel="stylesheet" href="https://script.viserlab.com/laramin/assets/global/css/iziToast.min.css">
 <script src="https://script.viserlab.com/laramin/assets/global/js/iziToast.min.js"></script>
 
-<!-- <?php if (isset($msg)) { ?>
+<?php if (isset($msg)) { ?>
     <script>
         "use strict";
         iziToast.success({
@@ -737,7 +737,7 @@ if ($row == 0) {
             position: "topRight"
         });
     </script>
-<?php } ?> -->
+<?php } ?>
 
 <!-- <script>
     "use strict";
