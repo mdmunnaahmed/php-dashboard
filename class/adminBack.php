@@ -26,14 +26,14 @@ $sql = "CREATE TABLE IF NOT EXISTS setting (
    currency_symbol VARCHAR(255) NOT NULL,
    base_color VARCHAR(255) NOT NULL,
    secondary_color VARCHAR(255) NOT NULL,
-   secure_pass VARCHAR(255) NOT NULL,
-   agree_policy VARCHAR(255) NOT NULL,
-   user_registration VARCHAR(255) NOT NULL,
-   force_ssl VARCHAR(255) NOT NULL,
-   email_verification VARCHAR(255) NOT NULL,
-   email_notification VARCHAR(255) NOT NULL,
-   sms_verification VARCHAR(255) NOT NULL,
-   sms_notification VARCHAR(255) NOT NULL,
+   secure_pass TINYINT  DEFAULT 0,
+   agree_policy TINYINT  DEFAULT 0,
+   user_registration TINYINT  DEFAULT 0,
+   force_ssl TINYINT  DEFAULT 0,
+   email_verification TINYINT  DEFAULT 0,
+   email_notification TINYINT  DEFAULT 0,
+   sms_verification TINYINT  DEFAULT 0,
+   sms_notification TINYINT  DEFAULT 0,
    PRIMARY KEY(id)
 )";
 $db->query($sql);
@@ -152,23 +152,64 @@ class adminBack
             return $msg;
         }
     }
-    function settingUpdate($data)
+    function updateSetting($data)
     {
         $site_title = $data['site_title'];
         $currency = $data['currency'];
         $currency_symbol = $data['currency_symbol'];
         $base_color = $data['base_color'];
         $secondary_color = $data['secondary_color'];
-        $secure_pass = $data['secure_pass'];
-        $agree_policy = $data['agree_policy'];
-        $user_registration = $data['user_registration'];
-        $force_ssl = $data['force_ssl'];
-        $email_verification = $data['email_verification'];
-        $email_notification = $data['email_notification'];
-        $sms_verification = $data['sms_verification'];
-        $sms_notification = $data['sms_notification'];
 
-        $query =  "UPDATE setting SET site_title = '$site_title', currency ='$currency', currency_symbol ='$currency_symbol', base_color ='$base_color', secondary_color ='$secondary_color', secure_pass ='$secure_pass', agree_policy ='$agree_policy', user_registration ='$user_registration', force_ssl ='$force_ssl', email_verification ='$email_verification', email_notification ='$email_notification', sms_verification ='$sms_verification', sms_notification ='$sms_notification'";
+        if (isset($data['secure_pass']) && $data['secure_pass'] == 'on') {
+            $secure_pass = 1;
+        } else {
+            $secure_pass = 0;
+        }
+
+        if (isset($data['agree_policy']) && $data['agree_policy'] == 'on') {
+            $agree_policy = 1;
+        } else {
+            $agree_policy = 0;
+        }
+
+        if (isset($data['user_registration']) && $data['user_registration'] == 'on') {
+            $user_registration = 1;
+        } else {
+            $user_registration = 0;
+        }
+
+        if (isset($data['force_ssl']) && $data['force_ssl'] == 'on') {
+            $force_ssl = 1;
+        } else {
+            $force_ssl = 0;
+        }
+
+        if (isset($data['email_verification']) && $data['email_verification'] == 'on') {
+            $email_verification = 1;
+        } else {
+            $email_verification = 0;
+        }
+
+        if (isset($data['email_notification']) && $data['email_notification'] == 'on') {
+            $email_notification = 1;
+        } else {
+            $email_notification = 0;
+        }
+
+        if (isset($data['sms_verification']) && $data['sms_verification'] == 'on') {
+            $sms_verification = 1;
+        } else {
+            $sms_verification = 0;
+        }
+
+        if (isset($data['sms_notification']) && $data['sms_notification'] == 'on') {
+            $sms_notification = 1;
+        } else {
+            $sms_notification = 0;
+        }
+
+
+        $query =  "UPDATE setting SET site_title = '$site_title', currency ='$currency', currency_symbol ='$currency_symbol', base_color ='$base_color', secondary_color ='$secondary_color', secure_pass = $secure_pass, agree_policy =$agree_policy, user_registration =$user_registration, force_ssl =$force_ssl, email_verification =$email_verification, email_notification =$email_notification, sms_verification =$sms_verification, sms_notification =$sms_notification";
         if (mysqli_query($this->conn, $query)) {
             $msg = "Setting Successfully Added";
             return $msg;

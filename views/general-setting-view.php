@@ -668,54 +668,54 @@ if ($row == 0) {
             <div class="row">
                 <div class="form-group col-md-3">
                     <label>Force Secure Password</label>
-                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disabled" name="secure_password" <?php if ($info['secure_pass'] == 1) {
-                                                                                                                                                                                                                        echo 'checked';
-                                                                                                                                                                                                                    } ?>>
+                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="secure_pass" <?php if ($info['secure_pass'] == 1) {
+                                                                                                                                                                                                                    echo 'checked';
+                                                                                                                                                                                                                } ?>>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Agree policy</label>
-                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disabled" name="agree_policy" <?php if ($info['agree_policy'] == 1) {
+                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="agree_policy" <?php if ($info['agree_policy'] == 1) {
                                                                                                                                                                                                                     echo 'checked';
                                                                                                                                                                                                                 } ?>>
                 </div>
                 <div class="form-group col-md-3">
                     <label>User Registration</label>
-                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disabled" name="user_registration" <?php if ($info['user_registration'] == 1) {
-                                                                                                                                                                                                                            echo 'checked';
-                                                                                                                                                                                                                        } ?>>
+                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="user_registration" <?php if ($info['user_registration'] == 1) {
+                                                                                                                                                                                                                        echo 'checked';
+                                                                                                                                                                                                                    } ?>>
                 </div>
 
                 <div class="form-group col-md-3">
                     <label>Force SSL</label>
-                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disabled" name="force_ssl" <?php if ($info['force_ssl'] == 1) {
-                                                                                                                                                                                                                    echo 'checked';
-                                                                                                                                                                                                                } ?>>
+                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="force_ssl" <?php if ($info['force_ssl'] == 1) {
+                                                                                                                                                                                                                echo 'checked';
+                                                                                                                                                                                                            } ?>>
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-3">
                     <label> Email Verification</label>
-                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="ev" <?php if ($info['email_verification'] == 1) {
-                                                                                                                                                                                                            echo 'checked';
-                                                                                                                                                                                                        } ?>>
+                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="email_verification" <?php if ($info['email_verification'] == 1) {
+                                                                                                                                                                                                                            echo 'checked';
+                                                                                                                                                                                                                        } ?>>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Email Notification</label>
-                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="en" <?php if ($info['email_notification'] == 1) {
-                                                                                                                                                                                                            echo 'checked';
-                                                                                                                                                                                                        } ?>>
+                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="email_notification" <?php if ($info['email_notification'] == 1) {
+                                                                                                                                                                                                                            echo 'checked';
+                                                                                                                                                                                                                        } ?>>
                 </div>
                 <div class="form-group col-md-3">
                     <label> SMS Verification</label>
-                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="sv" <?php if ($info['sms_verification'] == 1) {
-                                                                                                                                                                                                            echo 'checked';
-                                                                                                                                                                                                        } ?>>
+                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="sms_verification" <?php if ($info['sms_verification'] == 1) {
+                                                                                                                                                                                                                        echo 'checked';
+                                                                                                                                                                                                                    } ?>>
                 </div>
                 <div class="form-group col-md-3">
                     <label>SMS Notification</label>
-                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="sn" <?php if ($info['sms_notification'] == 1) {
-                                                                                                                                                                                                            echo 'checked';
-                                                                                                                                                                                                        } ?>>
+                    <input type="checkbox" data-width="100%" data-size="large" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Enable" data-off="Disable" name="sms_notification" <?php if ($info['sms_notification'] == 1) {
+                                                                                                                                                                                                                        echo 'checked';
+                                                                                                                                                                                                                    } ?>>
                 </div>
             </div>
 
@@ -729,7 +729,7 @@ if ($row == 0) {
 <link rel="stylesheet" href="https://script.viserlab.com/laramin/assets/global/css/iziToast.min.css">
 <script src="https://script.viserlab.com/laramin/assets/global/js/iziToast.min.js"></script>
 
-<?php if (isset($msg)) { ?>
+<!-- <?php if (isset($msg)) { ?>
     <script>
         "use strict";
         iziToast.success({
@@ -737,7 +737,7 @@ if ($row == 0) {
             position: "topRight"
         });
     </script>
-<?php } ?>
+<?php } ?> -->
 
 <!-- <script>
     "use strict";
