@@ -3952,7 +3952,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -3960,7 +3960,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
@@ -3978,7 +3978,7 @@
       &lt;div class="modal-content"&gt;
         &lt;div class="modal-header"&gt;
           &lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;
-          &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+          &lt;button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"&gt;
             &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
           &lt;/button&gt;
         &lt;/div&gt;
@@ -3986,7 +3986,7 @@
           &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class="modal-footer"&gt;
-          &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+          &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
           &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -4015,7 +4015,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -4023,7 +4023,7 @@
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique dolore mollitia sequi a reiciendis! Iure, architecto! Soluta quam beatae vel minima laudantium officia magni est, facilis labore iure placeat quo voluptatibus amet delectus dicta autem itaque hic in! Perspiciatis accusamus mollitia molestiae at quibusdam nesciunt fuga reiciendis hic earum beatae nemo, sed dolor, sequi nostrum! Quas, iure nesciunt magni veritatis sequi corporis impedit repellat ipsam modi aut sint saepe soluta, velit culpa vitae non? Labore iure, laudantium veritatis aut tenetur rerum dolorem placeat ab ex doloribus sunt quibusdam beatae modi ullam at, nobis facere tempore expedita! Sint deserunt ex qui delectus, nostrum quod iure consequatur mollitia, quos velit rerum maxime, ab adipisci? Quaerat tempora libero eos provident dolor nihil, repudiandae soluta modi odit optio sint accusamus sit aliquid numquam autem quisquam quam minima ratione perferendis a illo expedita ullam corporis assumenda! Cumque debitis nulla quisquam veniam doloribus reiciendis corporis eos in. Aut sit suscipit itaque! Accusantium numquam ex praesentium unde quibusdam provident natus repellendus doloribus, a exercitationem debitis, voluptate maiores eveniet nesciunt, dolores ipsa? Quae fugit dolorum sapiente incidunt quos ipsa nobis, magni facilis ratione fugiat? Debitis rerum dolores cumque deleniti voluptatibus amet! Dicta, esse harum delectus libero error maiores blanditiis quae deleniti porro ab assumenda itaque aperiam voluptas corporis cupiditate aliquid in aspernatur fuga ea sit! Ipsum praesentium error quis illum sed, pariatur voluptates ducimus quidem nostrum? Doloremque nobis architecto magni.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
@@ -4041,7 +4041,7 @@
       &lt;div class="modal-content"&gt;
         &lt;div class="modal-header"&gt;
           &lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;
-          &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+          &lt;button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"&gt;
             &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
           &lt;/button&gt;
         &lt;/div&gt;
@@ -4049,7 +4049,7 @@
           &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique dolore mollitia sequi a reiciendis! Iure, architecto! Soluta quam beatae vel minima laudantium officia magni est, facilis labore iure placeat quo voluptatibus amet delectus dicta autem itaque hic in! Perspiciatis accusamus mollitia molestiae at quibusdam nesciunt fuga reiciendis hic earum beatae nemo, sed dolor, sequi nostrum! Quas, iure nesciunt magni veritatis sequi corporis impedit repellat ipsam modi aut sint saepe soluta, velit culpa vitae non? Labore iure, laudantium veritatis aut tenetur rerum dolorem placeat ab ex doloribus sunt quibusdam beatae modi ullam at, nobis facere tempore expedita! Sint deserunt ex qui delectus, nostrum quod iure consequatur mollitia, quos velit rerum maxime, ab adipisci? Quaerat tempora libero eos provident dolor nihil, repudiandae soluta modi odit optio sint accusamus sit aliquid numquam autem quisquam quam minima ratione perferendis a illo expedita ullam corporis assumenda! Cumque debitis nulla quisquam veniam doloribus reiciendis corporis eos in. Aut sit suscipit itaque! Accusantium numquam ex praesentium unde quibusdam provident natus repellendus doloribus, a exercitationem debitis, voluptate maiores eveniet nesciunt, dolores ipsa? Quae fugit dolorum sapiente incidunt quos ipsa nobis, magni facilis ratione fugiat? Debitis rerum dolores cumque deleniti voluptatibus amet! Dicta, esse harum delectus libero error maiores blanditiis quae deleniti porro ab assumenda itaque aperiam voluptas corporis cupiditate aliquid in aspernatur fuga ea sit! Ipsum praesentium error quis illum sed, pariatur voluptates ducimus quidem nostrum? Doloremque nobis architecto magni.&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class="modal-footer"&gt;
-          &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+          &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
           &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -4078,7 +4078,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -4086,7 +4086,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
@@ -4104,7 +4104,7 @@
         &lt;div class="modal-content"&gt;
           &lt;div class="modal-header"&gt;
             &lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;
-            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+            &lt;button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"&gt;
               &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
             &lt;/button&gt;
           &lt;/div&gt;
@@ -4112,7 +4112,7 @@
             &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?&lt;/p&gt;
           &lt;/div&gt;
           &lt;div class="modal-footer"&gt;
-            &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+            &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
             &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -4141,7 +4141,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -4149,7 +4149,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
@@ -4167,7 +4167,7 @@
       &lt;div class="modal-content"&gt;
         &lt;div class="modal-header"&gt;
           &lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;
-          &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+          &lt;button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"&gt;
             &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
           &lt;/button&gt;
         &lt;/div&gt;
@@ -4175,7 +4175,7 @@
           &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class="modal-footer"&gt;
-          &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+          &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
           &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -4204,7 +4204,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -4212,7 +4212,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
@@ -4230,7 +4230,7 @@
       &lt;div class="modal-content"&gt;
         &lt;div class="modal-header"&gt;
           &lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;
-          &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+          &lt;button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"&gt;
             &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
           &lt;/button&gt;
         &lt;/div&gt;
@@ -4238,7 +4238,7 @@
           &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class="modal-footer"&gt;
-          &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+          &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
           &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -4267,7 +4267,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -4275,7 +4275,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
@@ -4293,7 +4293,7 @@
       &lt;div class="modal-content"&gt;
         &lt;div class="modal-header"&gt;
           &lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;
-          &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+          &lt;button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"&gt;
             &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
           &lt;/button&gt;
         &lt;/div&gt;
@@ -4301,7 +4301,7 @@
           &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium, recusandae nam voluptatum voluptatem porro sequi unde officiis consectetur, fuga voluptate beatae culpa facere deleniti?&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class="modal-footer"&gt;
-          &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+          &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
           &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -4328,14 +4328,14 @@
                         <div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
-                                    <button type="button" class="close ms-auto m-3" data-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="close ms-auto m-3" data-bs-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                     <div class="modal-body text-center">
                                         <i class="las la-check-circle f-size--100 text--success mb-15"></i>
                                         <h3 class="text--success mb-15">Congatulations</h3>
                                         <p class="mb-15">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium.</p>
-                                        <button type="button" class="btn btn--success" data-dismiss="modal">Continue</button>
+                                        <button type="button" class="btn btn--success" data-bs-dismiss="modal">Continue</button>
                                     </div>
                                 </div>
                             </div>
@@ -4350,14 +4350,14 @@
   &lt;div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-hidden="true"&gt;
     &lt;div class="modal-dialog modal-dialog-centered"&gt;
       &lt;div class="modal-content"&gt;
-        &lt;button type="button" class="close ms-auto m-3" data-dismiss="modal" aria-label="Close"&gt;
+        &lt;button type="button" class="close ms-auto m-3" data-bs-dismiss="modal" aria-label="Close"&gt;
           &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
         &lt;/button&gt;
         &lt;div class="modal-body text-center"&gt;
           &lt;i class="las la-check-circle f-size--100 text--success mb-15"&gt;&lt;/i&gt;
           &lt;h3 class="text--success mb-15"&gt;Congatulations&lt;/h3&gt;
           &lt;p class="mb-15"&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium.&lt;/p&gt;
-          &lt;button type="button" class="btn btn--success" data-dismiss="modal"&gt;Continue&lt;/button&gt;
+          &lt;button type="button" class="btn btn--success" data-bs-dismiss="modal"&gt;Continue&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -4383,14 +4383,14 @@
                         <div class="modal fade" id="modal-8" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
-                                    <button type="button" class="close ms-auto m-3" data-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="close ms-auto m-3" data-bs-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                     <div class="modal-body text-center">
                                         <i class="las la-times-circle f-size--100 text--danger mb-15"></i>
                                         <h3 class="text--danger mb-15">Error: Cannot process your entry!</h3>
                                         <p class="mb-15">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium.</p>
-                                        <button type="button" class="btn btn--danger" data-dismiss="modal">Continue</button>
+                                        <button type="button" class="btn btn--danger" data-bs-dismiss="modal">Continue</button>
                                     </div>
                                 </div>
                             </div>
@@ -4405,14 +4405,14 @@
   &lt;div class="modal fade" id="modal-8" tabindex="-1" role="dialog" aria-hidden="true"&gt;
     &lt;div class="modal-dialog modal-dialog-centered"&gt;
       &lt;div class="modal-content"&gt;
-        &lt;button type="button" class="close ms-auto m-3" data-dismiss="modal" aria-label="Close"&gt;
+        &lt;button type="button" class="close ms-auto m-3" data-bs-dismiss="modal" aria-label="Close"&gt;
           &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
         &lt;/button&gt;
         &lt;div class="modal-body text-center"&gt;
           &lt;i class="las la-times-circle f-size--100 text--danger mb-15"&gt;&lt;/i&gt;
           &lt;h3 class="text--danger mb-15"&gt;Error: Cannot process your entry!&lt;/h3&gt;
           &lt;p class="mb-15"&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aut corporis dolore expedita suscipit praesentium.&lt;/p&gt;
-          &lt;button type="button" class="btn btn--danger" data-dismiss="modal"&gt;Continue&lt;/button&gt;
+          &lt;button type="button" class="btn btn--danger" data-bs-dismiss="modal"&gt;Continue&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;

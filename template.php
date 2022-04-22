@@ -52,6 +52,8 @@ if (isset($_GET['adminLogout'])) {
                 if ($views) {
                     if ("dashboard" == $views) {
                         include("views/dashboard-view.php");
+                    } else if ("profile" == $views) {
+                        include("views/profile-view.php");
                     } else if ("table" == $views) {
                         include("views/table-view.php");
                     } else if ("all-users" == $views) {

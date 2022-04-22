@@ -1,6 +1,22 @@
+<?php
+$admin_obj = new adminBack();
+// $msg = $admin_obj->displayUsers();
+// $data = mysqli_fetch_assoc($msg);
+
+if (isset($_GET['action'])) {
+    $id = $_GET['id'];
+    if ($_GET['action'] == 'edit') {
+        $msg = $admin_obj->getEditUser($id);
+        $data = mysqli_fetch_assoc($msg);
+    }
+}
+
+?>
+
+
 <div class="row align-items-center mb-30 justify-content-between">
     <div class="col-lg-6 col-sm-6">
-        <h6 class="page-title">User Detail</h6>
+        <h6 class="page-title">User Details</h6>
     </div>
     <div class="col-lg-6 col-sm-6 text-sm-right mt-sm-0 mt-3 right-part">
     </div>
@@ -16,8 +32,8 @@
                         <img src="https://script.viserlab.com/localcoins/placeholder-image/450x475" alt="Profile Image" class="b-radius--10 w-100">
                     </div>
                     <div class="mt-15">
-                        <h4 class="">fdfffffff dfy5treds</h4>
-                        <span class="text--small">Joined At <strong>20 Apr, 2022 04:27 PM</strong></span>
+                        <h4 class=""><?php echo $data['fname'] . " " . $data['lname'] ?></h4>
+                        <span class="text--small">Joined At <strong><?php echo $data['res_time'] ?></strong></span>
                     </div>
                 </div>
             </div>
@@ -29,11 +45,20 @@
                 <ul class="list-group">
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Username <span class="">nhtbgvrfcd</span>
+                        Username <span class=""><?php echo $data['uname'] ?></span>
                     </li>
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Status <span class="badge badge-pill bg--success">Active</span>
+                        Status
+                        <?php if ($data['status'] == 1) { ?>
+
+                            <span class="badge badge-pill bg--success">Active</span>
+
+                        <?php } else { ?>
+
+                            <span class="badge badge-pill bg--danger">Banned</span>
+
+                        <?php } ?>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <span><b>BTC</b> Balance</span>
@@ -81,15 +106,15 @@
         <div class="card b-radius--10 overflow-hidden mt-30 box--shadow1">
             <div class="card-body">
                 <h5 class="mb-20 text-muted">User action</h5>
-                <a data-toggle="modal" href="#addSubModal" class="btn btn--success btn--shadow btn-block btn-lg">
+                <a data-bs-toggle="modal" href="#addSubModal" class="btn btn--success btn--shadow w-100 btn-lg">
                     Add/Subtract Balance </a>
-                <a href="" class="btn btn--primary btn--shadow btn-block btn-lg">
+                <a href="" class="btn btn--primary btn--shadow w-100 btn-lg">
                     Login Logs </a>
-                <a href="" class="btn btn--info btn--shadow btn-block btn-lg">
+                <a href="" class="btn btn--info btn--shadow w-100 btn-lg">
                     Send Email </a>
-                <a href="" target="_blank" class="btn btn--dark btn--shadow btn-block btn-lg">
+                <a href="" target="_blank" class="btn btn--dark btn--shadow w-100 btn-lg">
                     Login as User </a>
-                <a href="" class="btn btn--warning btn--shadow btn-block btn-lg">
+                <a href="" class="btn btn--warning btn--shadow w-100 btn-lg">
                     Email Log </a>
             </div>
         </div>
@@ -155,22 +180,21 @@
 
         <div class="card mt-50">
             <div class="card-body">
-                <h5 class="card-title border-bottom pb-2">Information of fdfffffff dfy5treds</h5>
+                <h5 class="card-title border-bottom pb-2">Information of <?php echo $data['fname'] . " " . $data['lname'] ?></h5>
 
                 <form action="#0" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="_token" value="RDPR0LwE3rY3oSzubeokVgrhlAMh2iCCu3XG0Egs">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group ">
                                 <label class="form-control-label ">First Name<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="firstname" value="fdfffffff">
+                                <input class="form-control" type="text" name="fname" value="<?php echo ucfirst($data['fname']) ?>">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-control-label  ">Last Name <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="lastname" value="dfy5treds">
+                                <input class="form-control" type="text" name="lname" value="<?php echo ucfirst($data['lname']) ?>">
                             </div>
                         </div>
                     </div>
@@ -179,14 +203,14 @@
                         <div class="col-md-6">
                             <div class="form-group ">
                                 <label class="form-control-label ">Email <span class="text-danger">*</span></label>
-                                <input class="form-control" type="email" name="email" value="sabbirrahman.itl@gmail.com">
+                                <input class="form-control" type="email" name="email" value="<?php echo $data['email'] ?>">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-control-label  ">Mobile Number <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="mobile" value="8801757093709">
+                                <input class="form-control" type="text" name="mobile" value="<?php echo $data['mobile'] ?>">
                             </div>
                         </div>
                     </div>
@@ -196,34 +220,27 @@
                         <div class="col-md-12">
                             <div class="form-group ">
                                 <label class="form-control-label ">Address </label>
-                                <input class="form-control" type="text" name="address" value="">
+                                <input class="form-control" type="text" name="address" value="<?php echo $data['address'] ?>">
                             </div>
                         </div>
 
-                        <div class="col-xl-3 col-md-6">
+                        <div class="col-xl-4 col-md-6">
                             <div class="form-group">
                                 <label class="form-control-label ">City </label>
-                                <input class="form-control" type="text" name="city" value="">
+                                <input class="form-control" type="text" name="city" value="<?php echo $data['city'] ?>">
                             </div>
                         </div>
 
-                        <div class="col-xl-3 col-md-6">
-                            <div class="form-group ">
-                                <label class="form-control-label ">State </label>
-                                <input class="form-control" type="text" name="state" value="">
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-md-6">
+                        <div class="col-xl-4 col-md-6">
                             <div class="form-group ">
                                 <label class="form-control-label ">Zip/Postal </label>
-                                <input class="form-control" type="text" name="zip" value="">
+                                <input class="form-control" type="text" name="zip" value="<?php echo $data['zip'] ?>">
                             </div>
                         </div>
 
-                        <div class="col-xl-3 col-md-6">
+                        <div class="col-xl-4 col-md-6">
                             <div class="form-group ">
-                                <label class="form-control-label ">Country </label>
+                                <label class="form-control-label">Country </label>
                                 <select name="country" class="form-control">
                                     <option value="AF">Afghanistan</option>
                                     <option value="AX">Aland Islands</option>
@@ -476,28 +493,34 @@
                     <div class="row">
                         <div class="form-group col-xl-4 col-md-6  col-sm-3 col-12">
                             <label class="form-control-label ">Status </label>
-                            <input type="checkbox" data-onstyle="-success" data-offstyle="-danger" data-toggle="toggle" data-on="Active" data-off="Banned" data-width="100%" name="status" checked>
+                            <input type="checkbox" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Active" data-off="Banned" data-width="100%" name="status" <?php if ($data['status'] == 1) {
+                                                                                                                                                                                                    echo 'checked';
+                                                                                                                                                                                                } ?>>
                         </div>
 
                         <div class="form-group  col-xl-4 col-md-6  col-sm-3 col-12">
                             <label class="form-control-label ">Email Verification </label>
-                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-toggle="toggle" data-on="Verified" data-off="Unverified" name="ev" checked>
+                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Verified" data-off="Unverified" name="email_verification" <?php if ($data['email_verification'] == 1) {
+                                                                                                                                                                                                                    echo 'checked';
+                                                                                                                                                                                                                } ?>>
 
                         </div>
 
                         <div class="form-group  col-xl-4 col-md-6  col-sm-3 col-12">
-                            <label class="form-control-label ">SMS Verification </label>
-                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-toggle="toggle" data-on="Verified" data-off="Unverified" name="sv" checked>
+                            <label class="form-control-label ">Email Notification </label>
+                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Verified" data-off="Unverified" name="email_notification" <?php if ($data['email_notification'] == 1) {
+                                                                                                                                                                                                                    echo 'checked';
+                                                                                                                                                                                                                } ?>>
 
                         </div>
                         <div class="form-group  col-md-6  col-sm-3 col-12">
                             <label class="form-control-label ">2FA Status </label>
-                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-toggle="toggle" data-on="Active" data-off="Deactive" name="ts">
+                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Active" data-off="Deactive" name="ts">
                         </div>
 
                         <div class="form-group  col-md-6  col-sm-3 col-12">
                             <label class="form-control-label ">2FA Verification </label>
-                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-toggle="toggle" data-on="Verified" data-off="Unverified" name="tv" checked>
+                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Verified" data-off="Unverified" name="tv" checked>
                         </div>
                     </div>
 
@@ -505,7 +528,7 @@
                     <div class="row mt-4">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <button type="submit" class="btn btn--primary btn-block btn-lg">Save Changes </button>
+                                <button type="submit" class="btn btn--primary w-100 btn-lg">Save Changes </button>
                             </div>
                         </div>
 
@@ -524,7 +547,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Add / Subtract Balance</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -533,7 +556,7 @@
                 <div class="modal-body">
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-toggle="toggle" data-on="Add Balance" data-off="Subtract Balance" name="act" checked>
+                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Add Balance" data-off="Subtract Balance" name="act" checked>
                         </div>
 
                         <div class="form-group col-md-12">
@@ -564,7 +587,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn--dark" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn--dark" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn--success">Submit</button>
                 </div>
             </form>

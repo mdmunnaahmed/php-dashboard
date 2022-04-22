@@ -1,7 +1,6 @@
 <?php
 $admin_obj = new adminBack();
 $msg = $admin_obj->displayUsers();
-
 ?>
 
 
@@ -69,7 +68,7 @@ $msg = $admin_obj->displayUsers();
                                 <p><?php echo $data['balance'] ?> USD</p>
                             </td>
                             <td data-label="Action">
-                                <a href="?action=user-details&&id=<?php echo $data['id'] ?>" class="btn btn-sm btn-outline--primary">Details</a>
+                                <a href="user-details.php?action=edit&&id=<?php echo $data['id'] ?>" class="btn btn-sm btn-outline--primary">Details</a>
                             </td>
                         </tr>
 

@@ -285,4 +285,13 @@ class adminBack
             return mysqli_query($this->conn, $query);
         }
     }
+
+    // Users Edit
+    function getEditUser($id)
+    {
+        $query =  "SELECT * FROM users WHERE id = $id";
+        if (mysqli_query($this->conn, $query)) {
+            return mysqli_query($this->conn, $query);
+        }
+    }
 }
