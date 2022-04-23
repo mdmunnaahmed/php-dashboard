@@ -64,11 +64,11 @@ $sql = "CREATE TABLE IF NOT EXISTS users (
    zip INT(11) NOT NULL,
    country VARCHAR(255) NOT NULL,
 
-   status TINYINT,
-   email_verification TINYINT,
-   email_notification TINYINT,
-   2fa_status TINYINT,
-   2fa_verification TINYINT,
+   status TINYINT NOT NULL,
+   email_verification TINYINT NOT NULL,
+   email_notification TINYINT NOT NULL,
+   twofa_status TINYINT NOT NULL,
+   twofa_verification TINYINT NOT NULL,
    res_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
    PRIMARY KEY(id)
 )";
@@ -106,7 +106,7 @@ $sql = "SELECT * FROM users";
 $result2 = mysqli_query($db, $sql);
 $row = mysqli_num_rows($result2);
 if ($row == 0) {
-    $sql = "INSERT INTO `users` (`id`, `fname`, `lname`, `uname`, `email`, `mobile`, `address`, `city`, `zip`, `country`, `status`, `email_verification`, `email_notification`, `2fa_status`, `2fa_verification`, `balance`) VALUES ('1', 'munna', 'ahmed', 'munna77', 'msdmunna77@gmail.com', '01400091582', 'Kushtia', 'Kushtia', '7020', 'Bangladesh', '1', '1', '1', '1', '0', '100')";
+    $sql = "INSERT INTO `users` (`id`, `fname`, `lname`, `uname`, `email`, `mobile`, `address`, `city`, `zip`, `country`, `status`, `email_verification`, `email_notification`, `twofa_status`, `twofa_verification`, `balance`) VALUES ('1', 'munna', 'ahmed', 'munna77', 'msdmunna77@gmail.com', '01400091582', 'Kushtia', 'Kushtia', '7020', 'Bangladesh', '1', '1', '1', '1', '0', '100')";
     mysqli_query($db, $sql);
 }
 
@@ -240,7 +240,6 @@ class adminBack
             $sms_notification = 0;
         }
 
-
         $query =  "UPDATE setting SET site_title = '$site_title', currency ='$currency', currency_symbol ='$currency_symbol', base_color ='$base_color', secondary_color ='$secondary_color', secure_pass = $secure_pass, agree_policy =$agree_policy, user_registration =$user_registration, force_ssl =$force_ssl, email_verification =$email_verification, email_notification =$email_notification, sms_verification =$sms_verification, sms_notification =$sms_notification";
         if (mysqli_query($this->conn, $query)) {
             $msg = "Setting Successfully Updated";
@@ -292,6 +291,65 @@ class adminBack
         $query =  "SELECT * FROM users WHERE id = $id";
         if (mysqli_query($this->conn, $query)) {
             return mysqli_query($this->conn, $query);
+        }
+    }
+
+    // Update Users Edit
+    function updateEditUser($data)
+    {
+        $fname = $data['fname'];
+        $lname = $data['lname'];
+        $email = $data['email'];
+        $mobile = $data['mobile'];
+        $address = $data['address'];
+        $city = $data['city'];
+        $zip = $data['zip'];
+        $country = $data['country'];
+
+        $id = $data['id'];
+
+
+        if (isset($data['status']) && $data['status'] == 'on') {
+            $status = 1;
+        } else {
+            $status = 0;
+        }
+
+        if (isset($data['email_verification']) && $data['email_verification'] == 'on') {
+            $email_verification = 1;
+        } else {
+            $email_verification = 0;
+        }
+
+        if (isset($data['email_notification']) && $data['email_notification'] == 'on') {
+            $email_notification = 1;
+        } else {
+            $email_notification = 0;
+        }
+
+        if (isset($data['twofa_status']) && $data['twofa_status'] == 'on') {
+            $twofa_status = 1;
+        } else {
+            $twofa_status = 0;
+        }
+
+        if (isset($data['twofa_verification']) && $data['twofa_verification'] == 'on') {
+            $twofa_verification = 1;
+        } else {
+            $twofa_verification = 0;
+        }
+
+
+        $query = "UPDATE users SET fname = '$fname', lname = '$lname', email = '$email', mobile = $mobile, address = '$address', city = '$city', zip = $zip, country = '$country', `status` = $status, email_verification = $email_verification, email_notification = $email_notification, twofa_status = $twofa_status, twofa_verification = $twofa_verification  WHERE id = $id";
+        // var_dump($query);
+        // die();
+
+        if (mysqli_query($this->conn, $query)) {
+            $msg = "User Details Updated";
+            return $msg;
+        } else {
+            $msg = "Not Updated";
+            return $msg;
         }
     }
 }

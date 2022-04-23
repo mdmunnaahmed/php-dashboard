@@ -1,7 +1,5 @@
 <?php
 $admin_obj = new adminBack();
-// $msg = $admin_obj->displayUsers();
-// $data = mysqli_fetch_assoc($msg);
 
 if (isset($_GET['action'])) {
     $id = $_GET['id'];
@@ -9,6 +7,10 @@ if (isset($_GET['action'])) {
         $msg = $admin_obj->getEditUser($id);
         $data = mysqli_fetch_assoc($msg);
     }
+}
+
+if (isset($_POST['submit-btn'])) {
+    $msg = $admin_obj->updateEditUser($_POST);
 }
 
 ?>
@@ -182,7 +184,8 @@ if (isset($_GET['action'])) {
             <div class="card-body">
                 <h5 class="card-title border-bottom pb-2">Information of <?php echo $data['fname'] . " " . $data['lname'] ?></h5>
 
-                <form action="#0" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST">
+                    <input type="hidden" value="<?php echo $data['id'] ?>" name="id">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group ">
@@ -515,12 +518,16 @@ if (isset($_GET['action'])) {
                         </div>
                         <div class="form-group  col-md-6  col-sm-3 col-12">
                             <label class="form-control-label ">2FA Status </label>
-                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Active" data-off="Deactive" name="ts">
+                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Active" data-off="Deactive" name="twofa_status" <?php if ($data['twofa_status'] == 1) {
+                                                                                                                                                                                                            echo 'checked';
+                                                                                                                                                                                                        } ?>>
                         </div>
 
                         <div class="form-group  col-md-6  col-sm-3 col-12">
                             <label class="form-control-label ">2FA Verification </label>
-                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Verified" data-off="Unverified" name="tv" checked>
+                            <input type="checkbox" data-width="100%" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Verified" data-off="Unverified" name="twofa_verification" <?php if ($data['twofa_verification'] == 1) {
+                                                                                                                                                                                                                    echo 'checked';
+                                                                                                                                                                                                                } ?>>
                         </div>
                     </div>
 
@@ -528,7 +535,7 @@ if (isset($_GET['action'])) {
                     <div class="row mt-4">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <button type="submit" class="btn btn--primary w-100 btn-lg">Save Changes </button>
+                                <button type="submit" name="submit-btn" class="btn btn--primary w-100 btn-lg h-45">Save Changes </button>
                             </div>
                         </div>
 
@@ -538,9 +545,6 @@ if (isset($_GET['action'])) {
         </div>
     </div>
 </div>
-
-
-
 
 <div id="addSubModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -594,3 +598,17 @@ if (isset($_GET['action'])) {
         </div>
     </div>
 </div>
+
+
+<link rel="stylesheet" href="https://script.viserlab.com/laramin/assets/global/css/iziToast.min.css">
+<script src="https://script.viserlab.com/laramin/assets/global/js/iziToast.min.js"></script>
+
+<?php if (isset($msg)) { ?>
+    <script>
+        "use strict";
+        iziToast.success({
+            message: "<?php echo $msg ?>",
+            position: "topRight"
+        });
+    </script>
+<?php } ?>
