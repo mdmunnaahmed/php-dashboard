@@ -68,6 +68,8 @@ if (isset($_GET['adminLogout'])) {
                         include("views/components-view.php");
                     } else if ("user-details" == $views) {
                         include("views/user/details-view.php");
+                    } else if ("section-header" == $views) {
+                        include("views/section-header-view.php");
                     }
                 }
 

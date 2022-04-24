@@ -263,7 +263,7 @@ if (isset($_POST['submit-btn'])) {
                                     <option value="AZ">Azerbaijan</option>
                                     <option value="BS">Bahamas</option>
                                     <option value="BH">Bahrain</option>
-                                    <option value="BD" selected>Bangladesh</option>
+                                    <option value="BD">Bangladesh</option>
                                     <option value="BB">Barbados</option>
                                     <option value="BY">Belarus</option>
                                     <option value="BE">Belgium</option>

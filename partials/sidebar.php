@@ -68,6 +68,9 @@
                         </div>
                     </li>
 
+
+                    <li class="sidebar__menu-header">Settings</li>
+                    
                     <li class="sidebar-menu-item">
                         <a href="general-setting.php">
                             <i class="menu-icon las la-tachometer-alt"></i>
